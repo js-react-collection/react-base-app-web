@@ -5,7 +5,7 @@ by @bertz-tech and @ShapeGroup / react base app boilerplate injected directly in
 Currently in this exemple:
 
 - react model in a standard web:
-    1. boilerplate with <b>Babel JSX</b>
+    1. boilerplate with <b>babel JSX</b>
     2. boilerplate with <b>plain Js</b>
 
 extra note:
