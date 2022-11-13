@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <title>React</title>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+        <!--do not use in production-->
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+
+    </head>
+
+    <body>
+
+        <div><!--REACT--></div>
+
+        <!-- with babel jsx (beauty but slow)-->
+        <script type="text/babel">
+
+            function TestBabelJSXComponent(props) {
+                return ( <h1>Hello, world!</h1> )
+            }
+
+            /*---*/
+
+            var make = React.createElement
+            var root = ReactDOM.createRoot(document.body.children[0])
+
+            root.render(
+                <TestBabelJSXComponent />
+            )
+
+        </script>
+
+        <!--pure react (rapid no need babel)
+        <script type="module">
+
+            function TestClassicComponent(props) {
+                return make('h1', null, `<p>Hello World!</p>`)
+            }
+
+            /*---*/
+
+            var make = React.createElement
+            var root = ReactDOM.createRoot(document.body)
+
+            root.render(
+                make( TestClassicComponent )
+            )
+
+        </script>
+        -->
+
+    </body>
+
+</html>
